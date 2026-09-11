@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "JavaFX: Run App (GUI)",
+            "request": "launch",
+            "mainClass": "com.example.App",
+            "vmArgs": "--module-path \"${workspaceFolder}/lib/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.media,javafx.web",
+            "console": "internalConsole"
+        },
+        {
+            "type": "java",
+            "name": "JavaFX: Run Launcher",
+            "request": "launch",
+            "mainClass": "com.example.Launcher",
+            "vmArgs": "--module-path \"${workspaceFolder}/lib/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.media,javafx.web",
+            "console": "internalConsole"
+        },
+        {
+            "type": "java",
+            "name": "JavaFX: Run Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "vmArgs": "--module-path \"${workspaceFolder}/lib/javafx-sdk/lib\" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.media,javafx.web",
+            "console": "internalConsole"
+        }
+    ]
+}
