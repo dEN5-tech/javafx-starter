@@ -28,7 +28,7 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 echo [RUN] Launching JavaFX application...
-"%JAVA_CMD%" --module-path "%ROOT%lib\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.media,javafx.web -cp "%ROOT%bin" com.example.Launcher
+"%JAVA_CMD%" --module-path "%ROOT%lib\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.base,javafx.media -cp "%ROOT%bin;%ROOT%lib\*" com.example.Launcher
 
 if %ERRORLEVEL% NEQ 0 (
     echo [ERROR] Application exited with code %ERRORLEVEL%.
