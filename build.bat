@@ -22,12 +22,9 @@ if not exist "bin" mkdir "bin"
 if not exist "bin\com\example" mkdir "bin\com\example"
 if not exist "bin\assets" mkdir "bin\assets"
 
-dir /s /b "%ROOT%src\*.java" > "%ROOT%sources.txt"
-
 echo [BUILD] Compiling Java source files...
-"%JAVAC_CMD%" -encoding UTF-8 --module-path "%ROOT%lib\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml -d "%ROOT%bin" @"%ROOT%sources.txt"
+"%JAVAC_CMD%" -encoding UTF-8 --module-path "lib\javafx-sdk\lib" --add-modules javafx.controls,javafx.fxml -d "bin" src\com\example\*.java
 set "COMPILE_ERR=%ERRORLEVEL%"
-if exist "%ROOT%sources.txt" del "%ROOT%sources.txt"
 
 if %COMPILE_ERR% NEQ 0 (
     echo [ERROR] Java compilation failed!
